@@ -13,8 +13,8 @@ The project focuses on applying digital economy principles to agricultural econo
     *   `LSTM.py`: Implementation of the standard LSTM model.
     *   `xLSTM.py`: Implementation of an experimental xLSTM model.
     *   `optimization.ipynb`: Jupyter notebook likely used for profit optimization and experimentation.
-*   **/data**: (Assuming you have a data folder or will add one) Contains the dataset(s) used for training and testing the models (e.g., `sales_threeyear.xlsx`).
-*   **/paper**: (Assuming you have a paper folder or will add one) Contains the final report or paper related to this project.
+*   **/data**: Contains the dataset(s) used for training and testing the models (e.g., `sales_threeyear.xlsx`).
+*   **/paper**:Contains the final report or paper related to this project.
 *   `LICENSE`: The Apache 2.0 License file for this project.
 
 ### Models Explored
@@ -47,8 +47,8 @@ The project implements and compares the following models for sales forecasting:
     *   `LSTM.py`: 标准 LSTM 模型的实现。
     *   `xLSTM.py`: xLSTM 模型的实现。
     *   `optimization.ipynb`: 用于利润优化实验的notebook。
-*   **/data**: (假设您有或将添加数据文件夹) 包含用于训练和测试模型的数据集 (例如 `sales_threeyear.xlsx`)。
-*   **/paper**: (假设您有或将添加论文文件夹) 包含与此项目相关的最终报告或论文。
+*   **/data**: 包含用于训练和测试模型的数据集 (例如 `sales_threeyear.xlsx`)。
+*   **/paper**: 包含与此项目相关的最终报告或论文。
 *   `LICENSE`: 本项目的 Apache 2.0 许可证文件。
 
 ### 模型探索
