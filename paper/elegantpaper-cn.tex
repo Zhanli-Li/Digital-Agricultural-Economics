@@ -72,7 +72,7 @@
 }
 \definecolor{skillcolor}{RGB}{0,78,150}
 \newcommand{\skillexample}[1]{\smallskip\noindent\textcolor{gray}{\textit{\footnotesize\textbf{示例：}} \textit{\footnotesize #1}}}
-
+\newcommand{\lecexample}[1]{\smallskip\noindent\textcolor{gray}{\textit{\footnotesize\textbf{推荐资料：}} \textit{\footnotesize #1}}}
 % 本文档命令
 \usepackage{array}
 \newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
@@ -85,489 +85,580 @@
 \newpage  % 目录后分页
 \part{报告一：数字经济研究所需知识、技能与数字经济课程设计}
 \begin{abstract}
-
-\keywords{Elegant\LaTeX{}，工作论文，模板}
+本文概述了数字经济研究所需的跨学科知识（数学、计算机科学、经济学）和核心技能，并设计了一门以培养数字化思维与实践能力为核心的课程。课程涵盖基础理论、关键技术、前沿研究与项目实践，通过多维度评估体系全面考察学生的技术应用和创新能力。
+\keywords{数字经济研究 \quad 基础知识 \quad 所需技能 \quad 课程设计}
 \end{abstract}
 \section{数字经济研究所需知识}
+数字经济是全新的经济形态，因此研究数字经济问题需要结合多方面的知识。本文将所需掌握的知识整理成数学、计算机和经济学三大板块，如图~\ref{fig:eco_founda} 所示。本部分安排如下：首先本文在第\ref{sub:math}节介绍所需数学知识；其次，本文在第\ref{sub:cs}节介绍所需计算机知识；最后本文在第\ref{sub:eco}介绍所需经济知识。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.86\linewidth]{intro.png}
+    \caption{数字经济研究必备知识}
+    \label{fig:eco_founda}
+\end{figure}
 \subsection{数学基础}
-数字经济研究需掌握多层次的数学工具，涵盖代数、分析、概率统计与优化理论。各知识模块及应用领域如下：
+\label{sub:math}
+在数字经济研究中，多层次的数学工具既是分析问题的基石，又是构建模型的前提，主要包括代数、分析、概率统计与优化理论等模块。
 
 \subsubsection{代数与线性代数}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握向量空间、矩阵运算（加法、数乘、内积）
-    \item 理解行列式、逆矩阵和秩的代数性质
-    \item 应用场景：主成分分析、特征提取等数据降维技术
+    \item 熟练运用向量空间与矩阵运算，包括加法、数乘与内积
+    \item 深刻理解行列式、逆矩阵和秩的代数性质
+    \item 应用场景：主成分分析（PCA）、特征提取等数据降维技术
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 丘维声. \textit{高等代数}
-    \item 丘维声. \textit{高等代数学习指导书}
-\end{enumerate}
+    \item 丘维声．\textit{高等代数}
+    \item 丘维声．\textit{高等代数学习指导书}
+\end{enumerate}}
+该模块为数字经济中的高维数据降维与特征提取提供了必要的数学支撑，确保算法的准确性与稳定性。
 
 \subsubsection{微积分与数学分析}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握函数极限、连续性、微分与积分
-    \item 理解梯度、方向导数等多元函数性质
-    \item 应用场景：优化问题求解、供需动态建模
+    \item 掌握函数极限、连续性，以及一元与多元函数的微分与积分
+    \item 理解梯度、方向导数等多元分析概念
+    \item 应用场景：优化问题求解、供需动态系统建模
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 陈纪修. \textit{数学分析}
-    \item 张筑生. \textit{数学分析新讲}
-\end{enumerate}
+    \item 陈纪修．\textit{数学分析}
+    \item 张筑生．\textit{数学分析新讲}
+\end{enumerate}}
+微积分是研究数字经济动态变化与优化策略的基础，支持模型求解与敏感性分析。
 
 \subsubsection{概率与统计基础}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握期望、方差、协方差等统计量
-    \item 理解最大似然估计与最小二乘原理
-    \item 应用场景：回归分析、用户评分模型
+    \item 掌握期望、方差、协方差等基本统计量
+    \item 理解最大似然估计与最小二乘法原理
+    \item 应用场景：线性回归、推荐系统中的评分预测
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 茆诗松. \textit{概率论与数理统计教程}
-    \item Ross S M. \textit{概率论基础教程} (梁宝生等译)
-\end{enumerate}
+    \item 茆诗松．\textit{概率论与数理统计教程}
+    \item Ross S. M.（梁宝生等译）．\textit{概率论基础教程}
+\end{enumerate}}
+该部分提供了数据分析与因果推断的核心方法，是评估数字经济政策与市场行为的理论依据。
 
 \subsubsection{优化理论}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握凸优化、梯度下降及拉格朗日法
-    \item 理解牛顿法、黄金分割等求解技术
-    \item 应用场景：资源分配优化、价格策略制定
+    \item 熟练掌握凸优化、梯度下降与拉格朗日乘子法
+    \item 理解牛顿法与黄金分割法等常用数值求解技术
+    \item 应用场景：资源配置优化、价格策略设计
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 文再文. \textit{最优化：建模、算法与理论}
-    \item 袁亚湘. \textit{最优化理论与方法}
-\end{enumerate}
+    \item 文再文．\textit{最优化：建模、算法与理论}
+    \item 袁亚湘．\textit{最优化理论与方法}
+\end{enumerate}}
+优化理论是制定数字经济中资源配置和定价策略的核心工具，保障决策过程的最优性。
 
 \subsubsection{高等分析理论}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握赋范空间、巴拿赫空间性质
-    \item 理解隐函数定理及存在性证明
-    \item 应用场景：市场均衡分析、动态竞争建模
+    \item 掌握赋范空间与巴拿赫空间的核心性质
+    \item 理解隐函数定理及存在性证明框架
+    \item 应用场景：市场均衡分析、动态博弈建模
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item Rudin W. \textit{Real and Complex Analysis}
-    \item Stein E M. \textit{Real Analysis}
-\end{enumerate}
+    \item Rudin W.．\textit{Real and Complex Analysis}
+    \item Stein E. M.．\textit{Real Analysis}
+\end{enumerate}}
+高等分析为数字经济模型的严谨性与均衡存在性提供了理论保证，是宏观框架分析的基础。
 
 \subsubsection{矩阵理论与分解}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握奇异值分解(SVD)技术
-    \item 理解主成分分析(PCA)原理
-    \item 应用场景：交易数据降维、平台匹配算法
+    \item 深入理解奇异值分解（SVD）与特征分解原理
+    \item 掌握PCA在数据降维与协方差分析中的应用
+    \item 应用场景：交易数据降维、平台匹配算法优化
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item Horn R A. \textit{Matrix Analysis}
-    \item Golub G H, Van Loan C F. \textit{Matrix Computations}
-\end{enumerate}
+    \item Horn R. A.．\textit{Matrix Analysis}
+    \item Golub G. H., Van Loan C. F.．\textit{Matrix Computations}
+\end{enumerate}}
+矩阵分解技术是处理大规模交易与网络数据的核心，支撑平台匹配与推荐系统的高效运行。
 
 \subsubsection{随机过程理论}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握马尔可夫链、泊松过程建模
-    \item 理解EM算法、贝叶斯推断技术
+    \item 掌握马尔可夫链与泊松过程的建模方法
+    \item 理解EM算法与贝叶斯推断的基本思路
     \item 应用场景：用户行为预测、金融风险评估
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item Durrett R. \textit{Essentials of Stochastic Processes}
-    \item Casella G. \textit{Statistical Inference}
-\end{enumerate}
+    \item Durrett R.．\textit{Essentials of Stochastic Processes}
+    \item Casella G.．\textit{Statistical Inference}
+\end{enumerate}}
+随机过程理论为分析数字经济中不确定性与风险提供了系统框架，是预测与评估的基石。
 
 \subsubsection{现代优化方法}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 掌握内点法、对偶理论
-    \item 理解分布式优化框架
-    \item 应用场景：实时竞价系统、多智能体调度
+    \item 熟悉内点法与对偶理论的核心思想
+    \item 理解分布式优化框架在大规模系统中的应用
+    \item 应用场景：实时竞价系统、多智能体任务调度
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item Boyd S, Vandenberghe L. \textit{Convex Optimization}
-    \item Bertsekas D P. \textit{Convex Analysis and Optimization}
-\end{enumerate}
+    \item Boyd S., Vandenberghe L.．\textit{Convex Optimization}
+    \item Bertsekas D. P.．\textit{Convex Analysis and Optimization}
+\end{enumerate}}
+该模块适用于支撑大规模在线系统的实时优化与分布式协调，提升数字平台的运行效率。
 
 \subsection{计算机技术}
+\label{sub:cs}
+计算平台与编程工具是数字经济研究的数据处理和模型实现基础，涵盖编程语言、数据处理、系统管理与机器学习框架。
+
 \subsubsection{编程语言体系}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 核心工具：Python(数据分析)、R(统计建模)、Stata(计量实证)
-    \item 辅助技术：Shell脚本(系统自动化)
-    \item 应用场景：数据清洗、计量模型实现
+    \item 核心语言：Python（数据分析）、R（统计建模）、Stata（计量实证）
+    \item 辅助工具：Shell 脚本（自动化与运维）
+    \item 应用场景：数据清洗、模型实现与批量处理
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item VanderPlas J. \textit{Python Data Science Handbook}
-    \item Kabacoff R I. \textit{R in Action}
-    \item 陈强. \textit{高级计量经济学及Stata应用}
-    \item Blum R. \textit{Linux命令行与Shell脚本编程大全}
-\end{enumerate}
+    \item VanderPlas J.．\textit{Python Data Science Handbook}
+    \item Kabacoff R. I.．\textit{R in Action}
+    \item 陈强．\textit{高级计量经济学及 Stata 应用}
+    \item Blum R.．\textit{Linux 命令行与 Shell 脚本编程大全}
+\end{enumerate}}
+掌握多种编程语言与脚本技术，可实现大规模数据处理与自动化实验，提升研究效率。
 
 \subsubsection{数据处理技术}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 核心框架：Pandas数据清洗、Spark分布式计算
-    \item 可视化工具：Matplotlib图形引擎
+    \item 核心框架：Pandas（数据清洗）、Spark（分布式计算）
+    \item 可视化工具：Matplotlib（绘图引擎）
     \item 应用场景：用户行为分析、市场趋势预测
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item McKinney W. \textit{Python for Data Analysis}
-    \item Bruce P. \textit{数据科学实战指南}
-    \item 刘思远. \textit{数据可视化：原理与实践}
-    \item 李戈. \textit{Spark大数据处理与分析实战}
-\end{enumerate}
+    \item McKinney W.．\textit{Python for Data Analysis}
+    \item Bruce P.．\textit{数据科学实战指南}
+    \item 刘思远．\textit{数据可视化：原理与实践}
+    \item 李戈．\textit{Spark 大数据处理与分析实战}
+\end{enumerate}}
+该技术模块是将原始业务数据转化为可分析信息的关键，直接影响模型输入的质量与分析结果的可靠性。
 
 \subsubsection{数据管理系统}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 数据库技术：SQL关系型、NoSQL非关系型
-    \item 流程工具：Apache Airflow工作流引擎
-    \item 应用场景：高并发交易系统、ETL管道设计
+    \item 数据库技术：SQL（关系型）、NoSQL（文档与键值存储）
+    \item 工作流工具：Apache Airflow（调度与监控）
+    \item 应用场景：高并发交易系统、ETL 管道设计
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item Forta B. \textit{SQL必知必会}
-    \item 宋天龙. \textit{MongoDB权威指南与实践}
-    \item Housman B. \textit{Data Engineering: Building Reliable Pipelines}
-    \item Burkov A. \textit{Data Version Control in Action}
-\end{enumerate}
+    \item Forta B.．\textit{SQL 必知必会}
+    \item 宋天龙．\textit{MongoDB 权威指南与实践}
+    \item Housman B.．\textit{Data Engineering: Building Reliable Pipelines}
+    \item Burkov A.．\textit{Data Version Control in Action}
+\end{enumerate}}
+稳定的数据管理能力为大规模交易与实时分析提供底层保障，是数字平台可靠运行的前提。
 
 \subsubsection{机器学习框架}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 基础工具：Scikit-learn传统算法库
-    \item 深度框架：PyTorch神经网络引擎
+    \item 传统算法：Scikit-learn（分类、回归、聚类）
+    \item 深度学习：PyTorch（神经网络开发与训练）
     \item 应用场景：用户画像构建、价格弹性预测
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 周志华. \textit{机器学习}
-    \item Goodfellow I, et al. \textit{Deep Learning}
-    \item Jurafsky D, Martin J H. \textit{Speech and Language Processing}
-    \item Szeliski R. \textit{Computer Vision: Algorithms and Applications}
-\end{enumerate}
+    \item 周志华．\textit{机器学习}
+    \item Goodfellow I. 等．\textit{Deep Learning}
+    \item Jurafsky D., Martin J. H.．\textit{Speech and Language Processing}
+    \item Szeliski R.．\textit{Computer Vision: Algorithms and Applications}
+\end{enumerate}}
+机器学习框架是实现智能化分析与预测的核心，支撑数字经济中自动化决策与个性化服务。
 
 \subsection{经济学理论}
+\label{sub:eco}
+扎实的经济学理论是构建数字经济分析框架的支撑，有着微观、宏观与计量方法三个维度的扎实基础极大有助于数字经济研究。
+
 \subsubsection{微观经济理论}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 核心概念：网络效应、双边市场、信息不对称
-    \item 研究重点：平台竞争策略、数据产权配置
-    \item 应用场景：电商平台生态、订阅定价模型
+    \item 关键概念：网络效应、双边市场、信息不对称
+    \item 研究议题：平台竞争策略、数据产权配置
+    \item 应用场景：电商平台生态设计、订阅制定价模型
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 徐晋. \textit{平台经济学}
-    \item Evans D S, Schmalensee R. \textit{企业触媒策略}
-    \item Gawer A. \textit{平台、市场和创新}
-    \item 张维迎. \textit{博弈论与信息经济学}
-\end{enumerate}
+    \item 徐晋．\textit{平台经济学}
+    \item Evans D. S., Schmalensee R.．\textit{企业触媒策略}
+    \item Gawer A.．\textit{平台、市场和创新}
+    \item 张维迎．\textit{博弈论与信息经济学}
+\end{enumerate}}
+微观理论为理解平台战略与市场交互机制提供了分析视角，是设计高效商业模式的理论基础。
 
 \subsubsection{宏观经济理论}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 核心问题：数据要素增长模型、数字货币政策
-    \item 研究重点：Solow模型扩展、通吃效应分析
-    \item 应用场景：央行数字货币、生产率测算
+    \item 研究重点：数据要素增长模型、数字货币政策
+    \item 核心议题：Solow 模型扩展、通吃效应分析
+    \item 应用场景：央行数字货币、全要素生产率测算
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 程实, 高欣弘. \textit{数字经济与数字货币}
-    \item 白津夫, 葛红玲. \textit{央行数字货币：理论、实践与影响}
-    \item Blanchard O. \textit{宏观经济学}
-    \item 集体著. \textit{数据要素前沿研究进展}
-\end{enumerate}
+    \item 程实、高欣弘．\textit{数字经济与数字货币}
+    \item 白津夫、葛红玲．\textit{央行数字货币：理论、实践与影响}
+    \item Blanchard O.．\textit{宏观经济学}
+    \item  Andreas M. Antonopoulos, David A. Harding. \textit{Mastering Bitcoin:
+Programming the Open Blockchain}
+\end{enumerate}}
+宏观理论为评估数字经济对整体经济增长与政策效果提供框架，是制定宏观政策的重要依据。
 
 \subsubsection{计量经济学方法}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item 核心方法：面板数据分析、因果推断
-    \item 关键技术：DID评估、GARCH预测
-    \item 应用场景：出口质量研究、加密货币分析
+    \item 核心技术：面板数据分析、因果推断
+    \item 关键方法：DID 设计、GARCH 波动率模型
+    \item 应用场景：出口质量研究、加密货币市场分析
 \end{itemize}
-
-\noindent \textbf{推荐教材：}
+\lecexample{%
 \begin{enumerate}[leftmargin=*,nosep]
-    \item 陈强. \textit{高级计量经济学及Stata应用}
-    \item Ardia D. \textit{GARCH Models: Structure, Statistical Inference and Financial Applications}
-    \item McKinney W. \textit{Python for Data Analysis}
-\end{enumerate}
+    \item 陈强．\textit{高级计量经济学及 Stata 应用}
+    \item Ardia D.．\textit{GARCH Models: Structure, Statistical Inference and Financial Applications}
+    \item Wooldridge J. M.．\textit{Introductory Econometrics: A Modern Approach}
+\end{enumerate}}
+计量方法是验证数字经济模型与实证假设的工具，保障研究结论的可信度与政策建议的有效性。
 
 
-\section{数字经济研究所需技能}
-
-\subsection{发现问题的能力}
-{\textbf{核心能力：}} 数字经济研究的起点，它决定了整个研究的方向及其潜在价值。研究者需要具备敏锐的洞察力，能够在大量的信息中迅速识别出真正有价值的研究课题，主要包括：
+\section{数字经济研究所需技能}\label{sec:skills}
+数字经济除了需要扎实的基础知识，也需要一系列实用的技能，本文总结了一系列有益的技能，如图~\ref{fig:tech} 所示。本节首先在第\ref{sec:problem_identification}节讨论“发现问题的能力”，然后在第\ref{sec:clarify_problem}节阐述“明确问题的能力”，接着在第\ref{sec:data_collection}节介绍“信息搜集能力”，随后在第\ref{sec:reporting}节讲述“做汇报能力”，再于第\ref{sec:data_analysis}节说明“数据分析能力”，接着在第\ref{sec:interdisciplinary}节探讨“跨学科协作能力”，最后在第\ref{sec:critical_thinking}节分析“批判性思维能力”。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{tech.pdf}
+    \caption{数字经济研究所需技能}
+    \label{fig:tech}
+\end{figure}
+\subsection{发现问题的能力}\label{sec:problem_identification}
+\textbf{核心能力：} 数字经济研究的起点，它决定了整个研究的方向及其潜在价值。研究者需要具备敏锐的洞察力，能够在大量信息中迅速识别真正有价值的研究课题，主要包括：
 \begin{itemize}
     \item 跟踪数字经济前沿动态的能力
     \item 对产业变革的敏感度
     \item 对社会需求的灵敏捕捉
 \end{itemize}
 
-{\textbf{重要性：}} 数字经济的飞速发展带来了大量新兴的现象和问题，研究者需要敏锐地捕捉并转化为具体的研究课题，例如平台垄断、数据隐私、数字鸿沟等。相关研究表明，数字经济领域大约60\%的创新成果来源于对新兴问题的准确发现。
+\textbf{重要性：} 数字经济的飞速发展带来了大量新现象和新问题，研究者需及时捕捉并转化为具体研究议题，如平台垄断、数据隐私、数字鸿沟等。相关研究表明，约60\%的创新成果源自对新兴问题的准确发现。
 
-{\textbf{应用场景：}} 主要体现在研究选题阶段：
+\textbf{应用场景：} 
 \begin{itemize}
-    \item 通过监测数字支付普及率的变化，揭示传统金融与数字金融融合过程中存在的问题
-    \item 通过分析用户行为数据，识别数字经济如何改变消费决策模式
-    \item 在研究过程中不断捕捉新现象，并根据新的发现调整研究方向
+    \item 监测数字支付普及率变化，揭示传统金融与数字金融融合中的痛点
+    \item 分析用户行为数据，识别数字经济如何重塑消费决策
+    \item 在研究过程中动态捕捉新现象，并据此调整方向
 \end{itemize}
 
-{\textbf{培养方法：}} 多角度培养这一能力：
+\textbf{培养方法：} 
 \begin{itemize}
-    \item 持续关注数字经济的最新发展（如阅读权威期刊、参与行业会议）
-    \item 强化跨学科的交流与合作，从多个角度去发现研究问题
-    \item 掌握文献综述技巧，通过系统的梳理工作来发现研究空白
-    \item 培养从数据中提炼信息的能力，发现潜在的研究议题
+    \item 持续关注前沿进展（阅读权威期刊、参加行业会议）
+    \item 强化跨学科交流，从多视角发现问题
+    \item 掌握文献综述方法，通过系统梳理发现研究空白
+    \item 锻炼从海量数据中提炼关键信息的能力
 \end{itemize}
 
-\skillexample{艾丝特·杜芙若（EstherDuflo）\\
-\textbf{问题：}迪弗洛、班纳吉等通过大量严谨的田野实验/随机对照试验发现了一些关键问题：导致贫困的原因非常复杂且非直观；传统的援助项目设计常常忽视穷人的实际行为和心理（例如穷人倾向于购买口味更好的昂贵粮食而非更有营养的便宜粮食，或宁愿贷款买电视也不愿用于提高生产力）。\\
-\textbf{理论/贡献：} 他们运用类似医学药物试验的随机对照试验方法（RCT），在现实世界中（如印度村庄）将受试者随机分为接受某项干预（如发放驱虫药、提供小额信贷、安装蚊帐、给老师发绩效工资）的“治疗组”和不接受干预的“对照组”，然后精准测量干预效果。这种方法极大地提高了对发展项目因果效应的识别能力，发现了许多“小而有效”的干预措施（如在疫区免费发放蚊帐能显著降低儿童疟疾发病率）。他们将经济学的研究方法引向更微观、更实证、更科学化的方向，共同获得诺贝尔经济学奖。}
+\skillexample{%
+\textbf{艾丝特·杜芙若（Esther Duflo）}\\
+\textbf{发现：} 杜芙若与班纳吉等学者通过严谨的田野实验（RCT）在印度等地识别出贫困成因的复杂性，揭示了传统援助项目设计常忽略受助者行为与心理倾向（如在营养与口味间的权衡）。\\
+\textbf{贡献：} 运用随机对照试验，将受试群体分为对照组与实验组，精准测量不同干预措施（如小额信贷、驱虫药、绩效工资）对健康与生产力的影响，从而发现“小而有效”的扶贫策略并推动经济学方法的微观实证化。}
 
-\subsection{明确问题的能力}
-{\textbf{核心能力：}} 能够将模糊的研究方向转化为清晰的研究课题是研究成功的关键。研究者必须能够准确界定复杂现象，并明确其研究边界及核心问题，主要包括：
+\subsection{明确问题的能力}\label{sec:clarify_problem}
+\textbf{核心能力：} 能将模糊方向转化为清晰课题是研究成功的关键，包括：
 \begin{itemize}
-    \item 研究问题的精准表达
-    \item 关键概念的清晰定义
-    \item 研究范围的合理界定
+    \item 精准表述研究问题
+    \item 清晰定义关键概念
+    \item 合理界定研究范围
 \end{itemize}
 
-{\textbf{重要性：}} 数字经济问题通常具有较强的跨领域性，且边界模糊（例如数据垄断问题涉及技术、法律、经济多个层面）。
+\textbf{重要性：} 数字经济问题跨领域且边界模糊，需准确界定研究对象与范畴，以避免概念混淆。
 
-{\textbf{应用场景：}} 主要适用于研究设计阶段：
+\textbf{应用场景：} 
 \begin{itemize}
-    \item 在研究"数字鸿沟"时，明确研究的是技术接入、技能差距，还是信息获取的差异
-    \item 研究"平台经济"时，确定是讨论商业模式、监管框架，还是社会影响
-    \item 在研究中，根据不断变化的情况对研究问题进行调整和再定义
+    \item 确定“数字鸿沟”研究侧重技术接入、技能差距或信息获取差异
+    \item 在“平台经济”研究中界定讨论商业模式、监管框架或社会影响
+    \item 根据新兴现象动态调整研究问题定义
 \end{itemize}
 
-{\textbf{培养方法：}} 需要系统化的训练：
+\textbf{培养方法：} 
 \begin{itemize}
-    \item 学习概念分析和理论建构的基本方法
-    \item 掌握如何使用研究问题模板（如"如何..."、"为什么..."等）
-    \item 通过不断的练习和同行评审，提升问题表述的准确性
-    \item 学习根据实际情况动态调整问题的定义
+    \item 学习概念分析与理论建构方法
+    \item 使用研究问题模板（如“如何……”、“为何……”等）
+    \item 通过练习与同行评审提升表述准确度
+    \item 学会根据实证结果动态修正问题边界
 \end{itemize}
 
 \skillexample{%
 \textbf{罗纳德·科斯（Ronald Coase）}\\
-\textbf{问题：}%
-科斯观察到现实中普遍存在“外部性”矛盾（如工厂污染损害居民健康、农场牲畜破坏邻居庄稼），但传统经济学（庇古理论）主张通过征税或补贴解决，实践效果有限。这一现象背后的核心矛盾模糊不清——究竟是市场失灵？产权归属？还是交易成本问题？\\
-\textbf{理论/贡献：}%
-科斯在《社会成本问题》中突破性地将抽象的“外部性冲突”转化为可操作的\textbf{产权界定与交易成本}问题。他提出：若交易成本为零，无论初始产权如何分配，市场谈判总能达成最优解（科斯定理）。这一重构将研究焦点精准定位于：
-\begin{enumerate}
-    \item 产权法律界定的清晰度
-    \item 现实交易成本的构成
-    \item 制度设计对谈判效率的影响
-\end{enumerate}
-\textbf{意义：}%
-为法律经济学与新制度经济学奠基，颠覆了政府干预外部性的传统认知，指出明晰产权和降低交易成本才是核心解决路径，获1991年诺贝尔经济学奖。}
+\textbf{问题：} 科斯观察到外部性问题并非单一的市场失灵，而是产权界定与交易成本的综合体现。\\
+\textbf{贡献：} 在《社会成本问题》中，他将“外部性冲突”转化为“产权不清与交易成本高昂”问题，提出科斯定理：若交易成本为零，市场自主谈判总能实现资源最优配置，从而奠定新制度经济学基础。}
 
-\subsection{信息搜集能力}
-{\textbf{核心能力：}} 数据搜集是研究的基础能力，它决定了数据的广度与深度。研究者需要从多个渠道获取高质量的数据，主要包括：
+\subsection{信息搜集能力}\label{sec:data_collection}
+\textbf{核心能力：} 数据搜集是研究根基，决定了结果的广度与深度，包括：
 \begin{itemize}
-    \item 学术文献
-    \item 行业报告
-    \item 企业数据
-    \item 政府统计数据
-    \item 社交媒体数据
+    \item 学术文献检索
+    \item 行业报告收集
+    \item 企业与政府数据获取
+    \item 社交媒体与大数据采集
 \end{itemize}
 
-{\textbf{重要性：}} 研究极度依赖数据，但数据来源的多样性和复杂性构成了巨大的挑战。例如，研究就业影响时需要多维度的数据。依据数据分析的拇指法则，研究中大约70\%的时间都用于数据的搜集与处理，而数据的质量直接影响结论的可信度。
+\textbf{重要性：} 研究高度依赖数据，约70\%的时间耗费在数据获取与预处理，数据质量直接影响结论可信度。
 
-{\textbf{应用场景：}} 主要应用于数据获取阶段：
+\textbf{应用场景：}
 \begin{itemize}
-    \item 通过爬虫技术获取电商平台的用户行为数据
-    \item 通过政府公开数据获取数字经济相关的规模统计
-    \item 通过企业访谈获得数字化转型过程中的内部视角
-    \item 处理非结构化数据，如文本和图像等
+    \item 利用爬虫技术抓取电商用户行为数据
+    \item 调取政府统计数据库中的数字经济规模指标
+    \item 通过访谈获得企业数字化转型的第一手资料
+    \item 处理非结构化数据，如文本与图像
 \end{itemize}
 
-{\textbf{培养方法：}} 技术和方法的双重训练：
+\textbf{培养方法：}
 \begin{itemize}
-    \item 掌握学术数据库和行业数据库的基础检索技术
-    \item 学习数据获取技术（如API调用、爬虫开发、问卷设计）
-    \item 掌握数据整理工具（如Excel、Python Pandas）
-    \item 了解数据获取过程中的伦理和法律边界
+    \item 掌握学术与行业数据库检索技巧
+    \item 学习API调用、爬虫开发与问卷设计
+    \item 熟练运用Excel、Python Pandas等工具
+    \item 理解数据伦理与法律边界
 \end{itemize}
 
-\skillexample{研究者结合工商局企业注册数据、电商平台交易记录和招聘网站岗位信息，构建了一个多维数据库，以研究数字经济对就业的影响}
-\subsection{做汇报能力}
-{\textbf{核心能力：}} 做汇报能力是在数字经济研究中至关重要的沟通技巧，能够将复杂的研究成果以清晰、有条理的方式传递给不同的听众。研究者需要具备结构化思维、有效表达和应对听众反馈的能力，主要包括：
+\skillexample{%
+\textbf{安格斯·迪顿（Angus Deaton）}\\
+\textbf{问题：} 迪顿在消费与福利研究中整合了家庭调查、宏观统计与市场价格数据，识别出发展中国家贫困测度与消费模式间的偏差。\\
+\textbf{贡献：} 他综合使用多源微观数据与宏观面板数据，提出更精确的消费函数模型，改进了对福利政策效果的评估方法，并因此获2015年诺贝尔经济学奖。}
+
+\subsection{做汇报能力}\label{sec:reporting}
+\textbf{核心能力：} 
 \begin{itemize}
-\item 信息整理与结构化表达
-\item 演讲技巧与情感感染力
-\item 数据展示与可视化技巧
-\item 听众互动与问题应对
+    \item 信息结构化与逻辑梳理
+    \item 演讲技巧与情感感染
+    \item 数据可视化与多媒体应用
+    \item 听众互动与问题应对
 \end{itemize}
 
-{\textbf{重要性：}} 在学术交流中，研究者不仅要能进行高水平的研究，还需将其成果有效地分享给同行、政策制定者或公众。优秀的汇报能力能使研究者的工作得到更广泛的关注与认可。汇报的质量直接影响研究的传播效果与影响力。例如，在国际学术会议上，研究者通过高效的汇报，能够获得更多的合作机会和研究资源。
+\textbf{重要性：} 高质量的汇报可扩大研究影响，促进跨界合作与决策采纳。
 
-{\textbf{应用场景：}} 主要体现在研究成果展示与学术交流中：
+\textbf{应用场景：} 
 \begin{itemize}
-\item 在学术会议中做报告，展示研究成果并解答与会者的问题
-\item 在团队内部进行研究进展汇报，帮助成员理解关键发现与研究方向
-\item 向非学术界（如企业管理者、政策制定者）汇报数字经济相关研究，促进跨界合作
-\item 通过多媒体工具进行数字经济的趋势分析报告，并通过数据可视化增强报告的说服力
+    \item 在学术会议上发表研究成果并回应质询
+    \item 在团队内部进行进展报告，确保共识
+    \item 向政策制定者或企业管理层推介研究发现
+    \item 运用PowerPoint、Prezi等工具强化演示
 \end{itemize}
 
-{\textbf{培养方法：}} 强化演讲与沟通技巧的培养：
+\textbf{培养方法：} 
 \begin{itemize}
-\item 参与演讲培训课程，提升公众演讲的信心与技巧
-\item 经常进行汇报演练，增强对时间管理和听众互动的掌控
-\item 学习使用各类可视化工具（如PowerPoint、Prezi）有效传达数据与研究成果
-\item 接受他人的反馈，不断优化汇报内容与演讲风格
+    \item 参加演讲培训，提升现场表达
+    \item 定期进行汇报演练，优化时间与节奏
+    \item 学习高级可视化工具，增强数据说服力
+    \item 邀请同行点评，迭代改进汇报内容
 \end{itemize}
 
-\skillexample{研究者在学术会议中通过清晰的汇报和生动的案例分析，成功展示了基于人工智能的数字支付系统研究，赢得了学界和行业专家的广泛关注}
-\subsection{数据分析能力}
-{\textbf{核心能力：}} 数据分析是数字经济研究中的核心环节，能够从大量数据中提取有价值的信息并进行有效的推理。研究者需要具备高效处理和分析数据的能力，主要包括：
+\skillexample{%
+\textbf{保罗·克鲁格曼（Paul Krugman）}\\
+\textbf{问题：} 2008年金融危机期间，信息混杂、解读不一，公众和政策层面缺乏清晰分析框架。\\
+\textbf{贡献：} 克鲁格曼通过《纽约时报》博客与公开演讲，将复杂的宏观经济学原理与实证数据结合，以生动语言和图表解析危机成因与应对方案，显著提升了学术界与大众的理解度，并因撰写通俗经济专栏获2008年诺贝尔经济学奖。}
+
+\subsection{数据分析能力}\label{sec:data_analysis}
+\textbf{核心能力：} 
 \begin{itemize}
     \item 数据预处理与清洗
-    \item 数据可视化
-    \item 数据建模与预测
-    \item 统计分析与推断
+    \item 可视化展示
+    \item 建模与预测
+    \item 统计推断与因果识别
 \end{itemize}
 
-{\textbf{重要性：}} 随着数字经济的不断发展，数据量日益庞大，单纯的描述性分析已无法满足需求，研究者必须通过深入的分析得出更有意义的结论。例如，基于机器学习模型预测用户行为、分析市场趋势等。研究表明，数据分析能力直接影响研究结果的精确性和可靠性。
+\textbf{重要性：} 描述性分析已难满足需求，需借助深度模型与因果推断以揭示机制。
 
-{\textbf{应用场景：}} 主要适用于数据分析阶段：
+\textbf{应用场景：} 
 \begin{itemize}
-    \item 通过回归分析研究数字支付普及对经济增长的影响
-    \item 利用聚类分析方法识别不同消费群体的行为模式
-    \item 采用时序分析技术对数字经济发展趋势进行预测
-    \item 结合机器学习算法，分析电商平台上消费者的购买预测
+    \item 回归分析数字支付普及对GDP增长的影响
+    \item 聚类识别不同消费群体的行为特征
+    \item 时间序列预测数字经济发展趋势
+    \item 应用机器学习优化电商推荐系统
 \end{itemize}
 
-{\textbf{培养方法：}} 强化统计学和计算机科学的双重训练：
+\textbf{培养方法：} 
 \begin{itemize}
-    \item 学习数据分析的基本理论（如假设检验、回归分析等）
-    \item 掌握常见的数据分析工具（如R、Python、SPSS）
-    \item 熟练使用数据可视化工具（如Tableau、Matplotlib、Power BI）
-    \item 深入学习机器学习算法及其应用（如聚类、回归、分类模型）
+    \item 学习假设检验、回归分析等统计理论
+    \item 掌握R、Python、SPSS等分析工具
+    \item 精通Matplotlib、Tableau等可视化软件
+    \item 深入理解聚类、分类、回归等机器学习算法
 \end{itemize}
 
-\skillexample{研究者使用回归分析模型，探索数字广告投入与消费者购买行为之间的关系，并通过机器学习优化广告投放策略}
+\skillexample{%
+\textbf{哈尔·瓦里安（Hal Varian）}\\
+\textbf{问题：} 在互联网时代，如何运用海量数据预测用户行为与市场动态？\\
+\textbf{贡献：} 瓦里安结合经济学与机器学习方法，提出信息经济学模型并在Google担任首席经济学家期间，领导团队利用点击流数据与拍卖模型优化在线广告定价，实现了数十亿美元的收入提升。}
 
-\subsection{跨学科协作能力}
-{\textbf{核心能力：}} 数字经济作为一个高度复杂和跨领域的研究领域，研究者需要与不同学科的专家合作，整合不同领域的知识与视角，解决复杂的经济和技术问题。主要包括：
+\subsection{跨学科协作能力}\label{sec:interdisciplinary}
+\textbf{核心能力：} 
 \begin{itemize}
-    \item 跨学科的知识整合
+    \item 跨学科知识整合
     \item 团队协作与项目管理
-    \item 与非学术机构的沟通与合作
+    \item 与非学术机构的沟通
 \end{itemize}
 
-{\textbf{重要性：}} 数字经济涉及技术、经济、社会等多个层面，研究者不能仅依赖单一学科的知识。例如，研究“数字货币”的时候需要同时了解计算机科学、金融学、法学等多个领域的内容。跨学科合作可以为研究提供新的思路，解决单一学科无法处理的复杂问题。
+\textbf{重要性：} 技术、法律、经济与社会因素交织，单一学科难以全面把握。
 
-{\textbf{应用场景：}} 主要体现在跨学科合作的过程中：
+\textbf{应用场景：} 
 \begin{itemize}
-    \item 与计算机科学专家共同研究人工智能在数字金融中的应用
-    \item 与法律专家合作探讨数据隐私保护与数字经济监管框架
-    \item 与企业管理学者合作研究数字化转型的战略规划
-    \item 参与国际合作，了解全球数字经济的不同发展趋势
+    \item 与计算机科学家研究区块链在支付系统中的应用
+    \item 与法学专家探讨数据隐私与监管框架
+    \item 与管理学者共研企业数字化转型战略
+    \item 参与国际联合项目，比较不同国家的数字经济实践
 \end{itemize}
 
-{\textbf{培养方法：}} 强化跨学科的合作与沟通：
+\textbf{培养方法：} 
 \begin{itemize}
-    \item 积极参与跨学科的研讨会和论坛
-    \item 与不同领域的专家开展合作项目
-    \item 学习如何将复杂问题转化为各学科都能理解的语言
-    \item 在研究中锻炼团队管理和项目协调能力
+    \item 参加跨学科研讨会与工作坊
+    \item 在联合项目中担任协调者或技术顾问
+    \item 学习将专业术语转化为通用语言
+    \item 培养团队管理与冲突解决能力
 \end{itemize}
 
-\skillexample{研究者与计算机科学家和金融专家联合进行区块链技术在支付系统中的应用研究，共同解决技术与经济的融合难题}
+\skillexample{%
+\textbf{约瑟夫·斯蒂格利茨（Joseph Stiglitz）}\\
+\textbf{问题：} 信息不对称不仅是市场失灵，更涉及法律与社会制度设计。\\
+\textbf{贡献：} 斯蒂格利茨将经济学、法学与政治学相结合，提出信息不对称理论，揭示市场机制中信息分配不均导致的效率损失，为监管政策与制度设计提供了多学科视角，并于2001年获诺贝尔经济学奖。}
 
-\subsection{批判性思维能力}
-{\textbf{核心能力：}} 批判性思维是数字经济研究中的必备能力，能够帮助研究者对现有理论和数据进行深入分析，识别潜在的偏差与不足。研究者需要具备独立思考和逻辑推理的能力，主要包括：
+\subsection{批判性思维能力}\label{sec:critical_thinking}
+\textbf{核心能力：} 批判性思维帮助研究者深入分析既有理论与数据，包括：
 \begin{itemize}
-    \item 评估已有文献的可信度与局限性
-    \item 提出有力的反驳与替代理论
+    \item 评估文献可信度与局限
+    \item 提出替代理论与反驳
     \item 从多角度审视问题
 \end{itemize}
 
-{\textbf{重要性：}} 在数字经济这一快速发展的领域，研究者不可盲目接受传统观点，需要通过批判性思维提出新的视角。例如，对于现有的"共享经济"理论，研究者需质疑其适用性，并结合新兴现象提出不同的见解。批判性思维有助于推动理论创新，提升研究的深度和广度。
+\textbf{重要性：} 快速发展的领域中，需质疑传统观点，以推动理论创新。
 
-{\textbf{应用场景：}} 主要体现在文献综述与理论框架的构建阶段：
+\textbf{应用场景：} 
 \begin{itemize}
-    \item 对传统的“平台经济”理论进行批判性分析，提出“平台生态系统”模型
-    \item 对现有的“数字货币”研究提出异议，探讨其技术安全性和市场应用的局限
-    \item 在数据分析中识别出数据偏差并提出修正方案
+    \item 对“平台经济”理论进行批判性分析，提出“平台生态系统”模型
+    \item 对“数字货币”研究质疑其安全性和应用边界
+    \item 在数据分析中识别偏差并设计修正方案
 \end{itemize}
 
-{\textbf{培养方法：}} 加强思维训练和实践：
+\textbf{培养方法：}
 \begin{itemize}
-    \item 经常阅读具有批判性思维的经典文献，学习如何质疑和分析理论
-    \item 在论文写作过程中反复推敲论点，提出不同的观点和假设
-    \item 参与学术讨论，接受他人对自己观点的挑战
-    \item 与同行进行思维碰撞，激发创新性思维
+    \item 阅读经典批判性文献，学习质疑与分析技巧
+    \item 在写作中反复推敲论点并提出备选假设
+    \item 参与学术讨论，接受对自己观点的挑战
+    \item 与同行进行思维碰撞，激发创新灵感
 \end{itemize}
 
-\skillexample{研究者通过批判性思维，重新定义“数字支付”概念，提出数字支付与传统支付的不同影响机制，推动了相关研究的进一步发展}
+\skillexample{%
+\textbf{阿马蒂亚·森（Amartya Sen）}\\
+\textbf{问题：} 传统福利经济学以效用为核心，忽视了个体能力与自由的重要性。\\
+\textbf{贡献：} 森提出“能力”视角，强调衡量社会福祉应关注人们的实际能力与选择自由，颠覆了单一效用指标的方法论框架，为发展经济学与公共政策研究注入全新批判性视野，并获1998年诺贝尔经济学奖。}
+
 
 
 \section{数字经济课程设计方案}
+本节安排如下：首先本文在第\ref{sec:history}节梳理了数字经济课程建设沿革，回顾了数字经济课程从早期的学科孕育期到当前的系统重构期的发展历程。在此基础上，本文进一步介绍了数字经济课程的核心组成部分，具体内容可参见第\ref{sec:overview}节。在后续的\ref{sec:modules}节中，我详细阐述了课程的核心模块及其对应的学习目标与方法。此外，本文还在第\ref{sec:goals}节中明确了本课程的学习目标，包括认知目标、能力目标和价值观目标，为学生提供了清晰的学习路径和发展方向。最后，课程的考核方案在第\ref{sec:assessment}节进行了详细说明，确保学生能够通过综合性的评价体系全面掌握课程内容并应用于实际项目中。
 
-本课程围绕“数字技术重构经济活动”这一主线展开，旨在帮助本科生理解数字经济的核心概念、技术工具和应用场景，培养数字化思维和创新能力。课程设计充分考虑本科生的知识背景，将复杂的数字经济理论简化为易于理解的概念框架，同时通过最新的案例和实践项目，使学生能够将理论应用于实际问题解决。
 
-\subsection{模块一：数字经济基础理论（1-3周课程）}
+\subsection{数字经济课程历史沿革} \label{sec:history}
+正如图~\ref{fig:dig_eco} 所示，数字经济课程的发展可分为三个阶段：学科孕育期（1950年代-1999），课程起源于计算机科学与信息经济学的交叉地带，因技术割裂与理论局限，尚未形成系统认知框架；融合探索期（2000-2015），互联网商业化引发课程范式迁移，虽出现教学尝试，但整体存在教材更新滞后、治理实践脱节、本土化不足等问题；系统重构期（2016年至今），AI与数据要素引领课程从“经济学+ICT”走向“技术-经济-治理”三维融合，产教协同机制趋于成熟。整体来看，课程体系演进受“技术适配度”与“制度嵌入性”双因素驱动，随着BEA定义、国家数据局等制度创新的落地，课程迭代周期已从过去的5-7年缩短至18个月，标志着全球数字经济教育进入高频更新、深度融合的新阶段。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{his_dig.png}
+    \caption{数字经济三大阶段}
+    \label{fig:dig_eco}
+\end{figure}
 
-本模块旨在帮助学生了解数字经济的基本概念和理论基础，涵盖以下内容：
+\subsection{课程概述} \label{sec:overview}
+本课程以“数字经济”为纲，贯彻“懂技术、会管理”的教学理念，核心聚焦于数字经济的关键支撑技术，特别是机器学习和深度学习等人工智能技术如何与具体的数字经济问题相结合。
+
+当前，“数字化转型”、“智慧金融”、“平台经济”等研究热潮方兴未艾，但也存在部分流于概念、换汤不换药的现象。突破此局限的关键，在于深入把握支撑数字经济的底层技术体系。例如，评估企业数字化水平，绝不能停留于年报关键词的简单统计，必须深入理解其背后的大数据平台、云计算架构与人工智能技术栈的协同作用；不仅要会获取数据，更要能结合具体业务场景。唯有如此，学生才能真正理解数字经济的运行机理，并具备驱动其落地应用的实战能力。
+
+理论与实践的深度交融是本课程的基石。为此，课程将约50\%的学时聚焦于数字经济核心技术的学习与实践，重点夯实机器学习与深度学习等关键方法。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{course.pdf}
+    \caption{课程核心组成}
+    \label{fig:course}
+\end{figure}
+
+\subsection{课程目标} \label{sec:goals}
+通过本课程的学习，学生将能够：
 \begin{itemize}
-    \item 数字经济的定义与发展历程
-    \item 传统经济与数字经济的区别
-    \item 数字化转型的基本框架
-    \item 数字经济的核心要素：数据、算法、平台、网络
-    \item 数字经济对全球经济格局的影响
-    \item 数字经济的政策与法律框架
+    \item \textbf{认知目标：}
+    \begin{enumerate}
+        \item 深入理解数字经济的核心概念，掌握其定义、发展历程、核心思想及在全球产业格局中的重要角色。
+        \item 理解支撑数字经济发展的关键技术原理，包括机器学习、深度学习、云计算和大数据平台的基础。
+        \item 熟悉数字经济的典型应用场景，并掌握相关的政策法规与治理框架。
+    \end{enumerate}
+    \item \textbf{能力目标：}
+    \begin{enumerate}
+        \item 能够灵活运用计量经济学与机器学习方法，分析与解决数字经济中的实际问题。
+        \item 掌握数据获取、预处理及探索性分析的技能，能够使用Python、Hadoop、Spark等工具进行数据处理。
+        \item 通过项目实践，设计并实现基于实际业务背景的解决方案，包括技术实现和报告撰写。
+        \item 培养团队合作与项目管理的能力，能够在团队中高效协作，共同完成期末项目。
+    \end{enumerate}
+    \item \textbf{价值观目标：}
+    \begin{enumerate}
+        \item 培养数字化思维，能够从技术角度深入理解数字经济的本质及其影响。
+        \item 激发创新能力，在解决实际问题时体现批判性思维和创造性。
+        \item 理解数字经济对社会的深远影响，培养职业道德和社会责任感。
+    \end{enumerate}
 \end{itemize}
 
-\subsection{模块二：数字经济相关技术（4-12周课程）}
+\subsection{课程核心模块} \label{sec:modules}
+本课程共设四个模块，旨在全面提升学生在数字经济领域的理解与实践能力。课程内容首先从基础概念入手，逐步引导学生掌握数字经济的核心理念；然后深入探讨支撑数字经济的关键技术；接着展示前沿的研究成果与行业发展动态；最后通过实际项目实践，提升学生的操作能力与项目管理能力。
 
-本模块深入探讨支撑数字经济的核心技术，涵盖以下主要技术内容：
+\subsubsection{模块一：数字经济基础（第1--3周）} \label{sec:module1}
+此模块帮助学生全面理解数字经济的基本概念及其发展背景。
 \begin{itemize}
-    \item 云计算与大数据分析
-    \item 人工智能与机器学习
-    \item 区块链与去中心化应用
-    \item 物联网与智能设备
-    \item 数字支付与电子商务技术
-    \item 虚拟现实与增强现实的应用
-    \item 数字安全与隐私保护技术
+    \item \textbf{第1周：传统经济与数字经济的演进对比}：讨论传统经济的特点及数字经济的崛起，分析二者之间的异同与联系。学生将学习到数字经济如何通过技术创新突破传统经济的局限。
+    \item \textbf{第2周：数据、算法、平台与网络的协同作用}：深入讲解数据、算法、平台和网络如何在数字经济中相互作用，强调数据驱动经济活动的核心作用。
+    \item \textbf{第3周：数字经济在全球产业格局中的角色}：分析全球数字经济的发展趋势，探讨不同国家如何通过政策引导与技术创新，推动数字经济的全球布局。
+    \item \textbf{第3周：政策法规与治理框架}：介绍数字经济相关的政策法规，强调数字经济在全球范围内的合规性与治理框架。
 \end{itemize}
 
-本模块还将通过技术案例分析，帮助学生理解技术如何驱动数字经济的发展与创新。
-
-\subsection{模块三：数字经济最新文献导读（13-14周课程）}
-
-本模块通过导读最新的学术文献，帮助学生了解数字经济的前沿研究和最新发展：
+\subsubsection{模块二：关键技术与工具（第4--12周）} \label{sec:module2}
+本模块着重讲解支撑数字经济的核心技术，并通过案例分析提升学生的技术应用能力。
 \begin{itemize}
-    \item 数字经济的研究热点与发展趋势
-    \item 数字化转型中的经济与社会问题
-    \item 数字技术对行业结构的影响与重构
-    \item 数字经济中的创新模式与企业战略
-    \item 未来数字经济的挑战与机遇
+    \item \textbf{第4周：计量经济学基本方法与机器学习模型的差异}：讲解计量经济学与机器学习模型的基本区别，帮助学生了解两者的应用场景与技术基础。
+    \item \textbf{第5周：广义线性模型（Lasso、Ridge、Elastic Net）}：深入探讨广义线性模型的基本原理，学习如何使用Lasso、Ridge、Elastic Net等方法进行变量选择与模型优化。
+    \item \textbf{第6--7周：树模型与集成算法（决策树、随机森林、GBDT、XGBoost）}：讲解树模型及其集成方法，包括决策树、随机森林、GBDT和XGBoost，重点培养学生在实际数据分析中运用这些技术的能力。
+    \item \textbf{第8--9周：神经网络（多层感知机、卷积神经网络、循环神经网络）}：通过深入讲解多层感知机、卷积神经网络（CNN）和循环神经网络（RNN），帮助学生掌握神经网络在图像、语音和时间序列分析中的应用。
+    \item \textbf{第10--12周：云计算与大数据平台（Hadoop、Spark）}：介绍云计算与大数据技术，包括Hadoop与Spark平台的应用，学生将通过实践操作，掌握如何处理与分析大规模数据集。
 \end{itemize}
 
-\subsection{模块四：学生自主解决数字经济中的问题（15-16周课程）}
-
-本模块鼓励学生通过自主研究和团队协作，解决实际中的数字经济问题。课程重点包括：
+\subsubsection{模块三：前沿文献与行业洞察（第13--14周）} \label{sec:module3}
+本模块通过专题讲座与案例分析，帮助学生深入了解数字经济中的前沿研究与行业发展趋势。
 \begin{itemize}
-    \item 项目选题与问题定义：学生可选择与数字经济相关的实际问题进行研究
-    \item 数据收集与分析：学生根据问题选择合适的数据和分析方法
-    \item 方案设计与技术实现：学生设计基于数字技术的创新解决方案
-    \item 项目汇报与展示：学生最终提交研究报告并进行项目展示
+    \item \textbf{第13周：博弈论在数字经济中的应用}：通过案例分析，介绍现代计算技术在复杂博弈模型求解中的应用，帮助学生理解博弈论在数字经济中的重要性\citep{sandholm2010state,hu2023recent}。
+    \item \textbf{第13周：双重机器学习在微观实证中的应用}：讲解双重机器学习在微观经济学实证分析中的应用，培养学生使用新型方法分析经济问题的能力\citep{chernozhukov2018double,athey2019machine}。
+    \item \textbf{第14周：深度神经网络在宏观经济学中的应用}：介绍深度神经网络在时间序列预测中的应用，特别是如何利用深度学习技术预测宏观经济指标\citep{lim2021time,benidis2022deep}。
+    \item \textbf{第14周：大语言模型（LLM）在市场营销中的应用}：分析大语言模型（如GPT-4）在市场感知调查与消费者行为预测中的应用\citep{wang2024large,arora2025ai}。
+    \item \textbf{第14周：运筹优化中的数据驱动方法}：介绍数据驱动的学习优化和优化学习范式，帮助学生理解数据如何推动运筹优化的进步\citep{andrychowicz2016learning,chen2022learning}。
 \end{itemize}
 
-通过本模块，学生不仅能够应用所学知识，还能锻炼团队合作与项目管理能力。
+\subsubsection{模块四：项目实践与应用（第15--16周）} \label{sec:module4}
+本模块通过实践项目，帮助学生巩固所学知识，提升团队合作与项目管理能力。
+\begin{itemize}
+    \item \textbf{第15周：选题与方案设计}：学生将根据实际业务背景，定义项目问题与目标，进行选题与方案设计。
+    \item \textbf{第15周：数据获取与分析}：学生将学习如何通过网络爬虫技术或开放数据平台获取数据，进行数据清洗与探索性分析。
+    \item \textbf{第16周：技术实现}：学生将选择合适的技术栈，搭建端到端的数字经济应用流程，完成项目的技术实现。
+    \item \textbf{第16周：报告与演示}：学生将撰写技术报告，并进行项目展示与答辩，提升项目汇报与沟通能力。
+\end{itemize}
+
+通过本模块的学习，学生不仅能应用所学的技术知识，还能提升团队合作能力和项目管理能力，为未来的职业生涯打下坚实基础。
+
+\subsection{课程评分规则} \label{sec:assessment}
+表 \ref{tab:assessment} 展示了本课程的评分分布，其中加分项的最高分为10分，最终课程总分为100分，旨在全面评估学生的学习成果和实践能力。
+\begin{table}[H]
+  \centering
+    \caption{数字经济课程考核方案}
+  \begin{tabular}{p{4cm} >{\centering\arraybackslash}p{2cm} >{\centering\arraybackslash}p{8cm}}
+    \toprule
+    考核环节 & 权重（\%） & 说明 \\
+    \midrule
+课堂参与与出勤 & 20 & 包括出勤、课堂讨论、案例分享等；鼓励主动提问与团队协作。 \\
+期中开卷考试 & 10 & 提醒学生自主学习，开卷考试突出强调学生查阅资料解决问题的能力。 \\
+课后作业 & 30 & 对应模块二（第4–12周）中的动手实践，每次作业需提交代码与报告。 \\
+期末项目实践 & 40 & 包括：方案设计与数据分析（15\%）、技术实现与报告（10\%）和团队汇报与答辩（15\%） \\
+\textcolor{blue}{加分项} & \textcolor{blue}{10} & \textcolor{blue}{课堂回答问题、期末项目出彩}\\
+    \bottomrule
+  \end{tabular}
+  \label{tab:assessment}
+\end{table}
+
+
 \newpage
 \part{报告二：数字化农产品补货与定价策略：深度学习算法设计与实证验证}
 \begin{abstract}
@@ -1099,7 +1190,6 @@ D_i = e^{\alpha_i} \left[ c_i (1 + m_i) \right]^{-\beta_i} \prod_j p_j^{\gamma_{
 本研究数据通过\url{https://github.com/Zhanli-Li/Digital-Agricultural-Economics}公开访问，使用权限依据Apache-2.0 license。
 \section*{AI辅助声明}
 Copilot 用于辅助编写Python代码，我已检查代码并确保其正确性。ChatGPT 和 DeepSeek 用于辅助润色文章和检查语病，我已检查内容并确保其正确性。代码或内容中的任何错误由我本人负责。
-\newpage
 \newpage
 \nocite{*}
 \printbibliography[heading=bibintoc, title=\ebibname]
