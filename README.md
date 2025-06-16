@@ -1,6 +1,6 @@
 # Digital-Agricultural-Economics / 数字农业经济
 
-## English
+## English Version
 
 This repository contains the final project for the "Principles and Applications of Digital Economy (Bilingual Course)" at Wenlan School of Business, Zhongnan University of Economics and Law.
 
@@ -34,7 +34,7 @@ The project implements and compares the following models for sales forecasting:
 
 ---
 
-## 中文
+## 中文版本
 
 本仓库包含中南财经政法大学文澜学院《数字经济原理与应用（双语）》的课程结课项目。
 
