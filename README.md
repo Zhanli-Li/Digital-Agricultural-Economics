@@ -4,7 +4,7 @@
 
 This repository contains the final project for the "Principles and Applications of Digital Economy (Bilingual Course)" at Wenlan School of Business, Zhongnan University of Economics and Law.
 
-The project focuses on applying digital economy principles to agricultural economics, specifically exploring time-series forecasting of agricultural product sales using various deep learning models.
+The project focuses on applying digital economy principles and technology to agricultural economics, specifically exploring time-series forecasting of agricultural product sales using various deep learning models.
 
 ### Project Structure
 
@@ -38,7 +38,7 @@ The project implements and compares the following models for sales forecasting:
 
 本仓库包含中南财经政法大学文澜学院《数字经济原理与应用（双语）》的课程结课项目。
 
-该项目致力于将数字经济原理应用于农业经济学领域，特别是利用多种深度学习模型对农产品销量进行时间序列预测。
+该项目致力于将数字经济原理和技术应用于农业经济学领域，特别是利用多种深度学习模型对农产品销量进行时间序列预测。
 
 ### 项目结构
 
@@ -59,7 +59,6 @@ The project implements and compares the following models for sales forecasting:
 *   xLSTM (一种实验性的 LSTM 变体)
 
 ### 依赖库
-* Python
 * Pandas
 * NumPy
 * PyTorch
